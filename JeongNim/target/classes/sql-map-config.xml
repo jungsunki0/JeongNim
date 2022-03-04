@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>
+	
+	<!-- DataSource는 스프링 프레임워크(applicationContext.xml에서 이미 등록됨) -->
+	
+	<!-- properties 설정 - 스프링 프레임워크(applicationContext.xml에서 이미 등록됨)
+	 @외부 프로퍼티 파일을 참조하여 사용할 떄 사용한다.
+	 @선언 된 프로퍼티는 ${프로퍼티 이름}으로 참조하여 사용 가능
+	<properties resource="db.properties" />
+	-->
+	
+	<!-- Alias 설정
+	@<typeAliases> 를 여러개 가질수 있음
+	@BoardVO 클래스에 대한 Alias만 board로 설정한 상태
+	-->
+	<!-- 
+	<typeAliases>
+		<typeAlias alias="board" type="com.springbook.biz.board.BoardVo"></typeAlias>
+	</typeAliases>
+	 -->
+	
+	<!-- Sql Mapper 설정
+	@<mapper> 를 여러개 가질수 있음
+	@mapper를 이용하여 SQL명령어 들이 저장된 SQL 파일들을 등록할 수 있음 -->
+	<!-- 
+	<mappers>
+		<mapper resource="mappings/board-mapping.xml" />
+	</mappers>
+	 -->
+	
+</configuration>
